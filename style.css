@@ -55,8 +55,103 @@ body {
   font-weight: 400;
   font-style: normal;
   overflow-x: hidden;
+  color: #FFFFFF;
+}
+
+.wrapper {
+  padding:  4em 5%;
 }
 
 header {
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 5em;
+}
+
+header p {
+  font-size: 1.8rem;
+}
+
+nav {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1em;
+}
+
+nav a {
+  font-style: normal;
+  color: white;
+  font-size: 1.4rem;
+  text-shadow: 0px 0px 10px rgba(255,255,255,1);
+}
+
+.offerings {
+  padding : 1em 3em;
+}
+
+h2.glow-y-g {
+  font-size: 4.5rem;
+  background: linear-gradient(to right, #FFF500, #9EFF00);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  margin-bottom : 1em;
+}
+
+h3.glow-y-g {
+  font-size: 4rem;
+  background: linear-gradient(to right, #FFF500, #9EFF00);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.boxes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.boxes > div {
+  width: 46%;
+  padding : 4%;
+  border-radius: 20px;
+  display : flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+.boxes > div > p {
+  font-size: 1.7rem;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.box-subbody {
+  display: flex;
+  flex-direction: row;
+  padding : 1em;
+  font-size: 1.5rem;
+  justify-content: space-between;
+}
+
+.box-subbody > p {
+  display : flex;
+  flex-direction: column;
+  justify-content: center;
+  width : 75%;
+
+}
+
+.box-subbody > img {
+  object-fit: contain;
+}
+
+.math {
+  background: radial-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5) ), url('png/math_stock.png');
+}
+
+.coding {
+  background: radial-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5) ), url("png/coding_stock.png");
 }
