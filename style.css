@@ -240,6 +240,12 @@ h2.glow-r-o {
   width : 70%;
   text-align: center;
   border-radius: 10px;
-  background: rgba(234, 234, 234, 0.8);
+  /* background: rgba(234, 234, 234, 0.8); */
+  border: 2px solid white;
+  backdrop-filter: blur(0px);
+  transition: all 0.75s ease;
+}
 
+.buttons a:hover {
+  backdrop-filter: blur(10px);
 }
