@@ -97,6 +97,7 @@ h2.glow-y-g {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   margin-bottom : 1em;
+  width: fit-content;
 }
 
 h3.glow-y-g {
@@ -119,27 +120,18 @@ h3.glow-y-g {
   flex-direction: column;
   align-items: center;
   background-size: cover;
-  /* box-shadow: 0px 0px 5px #FFFFFF;
-  animation: linear shadow-spin 10s infinite; */
+  /* box-shadow: 0px 0px 15px #FFFFFF; */
+  /* animation: ease shadow-spin 3s infinite; */
 }
 
-@keyframes shadow-spin {
-  0% {
-      box-shadow: 2px 0px 5px #FFFFFF;
+/* @keyframes shadow-spin {
+  from {
+      box-shadow: 0px 0px 5px #FFFFFF;
   }
-  25% {
-      box-shadow: 0px -2px 5px #FFFFFF;
+  to {
+      box-shadow: 0px 0px 20px #FFFFFF;
   }
-  50% {
-      box-shadow: -2px 0px 5px #FFFFFF;
-  }
-  75% {
-      box-shadow: 0px 2px 5px #FFFFFF;
-  }
-  100% {
-      box-shadow: 2px 0px 5px #FFFFFF;
-  }
-}
+} */
 
 .boxes > div > p {
   font-size: 1.7rem;
@@ -181,8 +173,27 @@ h2.glow-r-o {
   background: linear-gradient(to right, #FF0000, #FF7A00);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  margin-bottom : 1em;
   text-align: center;
+  display: block;
+  margin :auto;
+  margin-bottom : 1em;
+  width: fit-content;
+  /* animation: color-shift 5s linear infinite; */
+}
+
+@keyframes color-shift {
+  0% {
+    background: linear-gradient(to right, #FF0000, #FF7A00);
+  }
+  33% {
+    background: linear-gradient(to right, #FF7A00, #FFE500);
+  }
+  66% {
+    background: linear-gradient(to right, #FFE500, #FF0000);
+  }
+  100%{
+    background: linear-gradient(to right, #FF0000, #FF7A00);
+  }
 }
 
 .scheduling {
@@ -248,4 +259,159 @@ h2.glow-r-o {
 
 .buttons a:hover {
   backdrop-filter: blur(10px);
+}
+
+
+
+h2.glow-p-b {
+  font-size: 4.5rem;
+  background: linear-gradient(to right, #FF00F5, #3300FF);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  display: block;
+  margin :0 0 0 auto;
+  margin-bottom : 1em;
+  width: fit-content;
+}
+
+.tutors-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-us {
+    margin: 1em 3em;
+}
+
+.tutor {
+  display: flex;
+  align-items: center;
+  margin: 3em 1em;
+}
+
+.text-container {
+  margin-left: 2em;
+}
+
+.tutor img {
+  width: 70%;
+  box-shadow: 0px 0px 10px #FFFFFF;
+  border-radius: 10px;
+}
+
+.text-container h2,
+.text-container p {
+  margin: 1em 0;
+}
+
+.text-container h2{
+  font-size: 3rem;
+}
+
+.text-container p{
+  font-size: 1.3rem;
+}
+
+.text-container a {
+  color: white;
+  text-decoration: underline;
+  transition : all 0.75s ease;
+}
+
+.text-container a:hover {
+  text-decoration: underline;
+  font-size: 1.5rem;
+}
+
+@keyframes animate-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes animate-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+main {
+  animation: animate-up 1s ease;
+}
+
+header {
+  animation : animate-down 1s ease;
+}
+
+@media (max-width: 800px) {
+  .boxes {
+    flex-direction: column;
+  }
+
+  .boxes > div {
+    width: 100%;
+    margin : 1em 0em;
+  }
+
+  .box-subbody {
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    font-size: 1rem;
+    justify-content: space-between;
+  }
+
+  .box-subbody > img {
+    width: 20%;
+  }
+
+  nav {
+    display: none;
+  }
+
+  header {
+    justify-content: space-around;
+  }
+
+  .scheduling {
+    flex-direction: column;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .subcontent {
+    flex-direction: column;
+  }
+
+  .content-img {
+    max-width: 30%;
+  }
+
+  .buttons {
+    width: 100%;
+  }
+
+  .buttons a{
+    font-size: 1.5rem;
+    padding: 0.75em;
+    margin : 1em 0;
+  }
+
+  .tutor {
+    flex-direction: column;
+  }
+
 }
